@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Love Story</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login-styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h2>Love❤️Story</h2>
+                <p>Nhập mật khẩu để vào nhé!</p>
+            </div>
+            <form id="loginForm" onsubmit="return validateLogin(event)">
+                <div class="input-group">
+                    <input type="text" id="username" required>
+                    <label for="username">Tên của anh</label>
+                    <div class="heart-icon">❤️</div>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label for="password">Mật khẩu của em</label>
+                    <div class="heart-icon">❤️</div>
+                </div>
+                <button type="submit" class="login-btn">
+                    <span>Đăng nhập</span>
+                    <div class="heart">❤️</div>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div id="success-popup" class="success-popup">
+        <div class="success-content">
+            <div class="success-header">
+                <h3>Đăng nhập thành công!</h3>
+                <div class="hearts-animation">
+                    <span>❤️</span>
+                    <span>❤️</span>
+                    <span>❤️</span>
+                </div>
+            </div>
+            <p>Chuyển hướng sau <span id="countdown">5</span> giây...</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="login-script.js"></script>
+</body>
+</html>

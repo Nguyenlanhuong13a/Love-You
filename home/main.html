@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Message</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Love❤️Story</div>
+            <div class="nav-links">
+                <a href="#home" class="active">Trang chủ</a>
+                <a href="#gallery">Kỷ niệm</a>
+                <a href="#message">Tâm thư</a>
+                <a href="#minigames">Minigames</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Em Yêu À!</h1>
+            <p>Anh có điều muốn nói với em...</p>
+            
+            <!-- Love Cards -->
+            <div class="love-cards">
+                <div class="love-card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="love-card-icon">💝</span>
+                    <h3>Nhớ Em</h3>
+                    <p>Em biết không, mỗi phút giây không có em bên cạnh là một phút giây anh nhớ em đến thế nào không?</p>
+                </div>
+                
+                <div class="love-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="love-card-icon">🌹</span>
+                    <h3>Yêu Em</h3>
+                    <p>Giữa vô vàn người, anh đã tìm thấy em. Và từ giây phút ấy, trái tim anh đã thuộc về em.</p>
+                </div>
+                
+                <div class="love-card" data-aos="fade-up" data-aos-delay="300">
+                    <span class="love-card-icon">✨</span>
+                    <h3>Vì Em</h3>
+                    <p>Em là động lực để anh cố gắng mỗi ngày. Vì em, anh sẽ trở thành phiên bản tốt nhất của chính mình.</p>
+                </div>
+                
+                <div class="love-card" data-aos="fade-up" data-aos-delay="400">
+                    <span class="love-card-icon">🎵</span>
+                    <h3>Điều Diệu Kỳ</h3>
+                    <p>Có người nói tình yêu là điều diệu kỳ nhất. Với anh, em chính là điều diệu kỳ đó.</p>
+                </div>
+            </div>
+
+            <!-- Existing counters -->
+            <div class="love-counters">
+                <div class="love-counter first-counter" data-aos="fade-up">
+                    <p>Thời gian yêu nhau</p>
+                    <div class="counter-container">
+                        <div class="counter-item">
+                            <span id="years">0</span>
+                            <span class="label">Năm</span>
+                        </div>
+                        <div class="counter-item">
+                            <span id="months">0</span>
+                            <span class="label">Tháng</span>
+                        </div>
+                        <div class="counter-item">
+                            <span id="days">0</span>
+                            <span class="label">Ngày</span>
+                        </div>
+                        <div class="counter-item">
+                            <span id="hours">0</span>
+                            <span class="label">Giờ</span>
+                        </div>
+                        <div class="counter-item">
+                            <span id="minutes">0</span>
+                            <span class="label">Phút</span>
+                        </div>
+                        <div class="counter-item">
+                            <span id="seconds">0</span>
+                            <span class="label">Giây</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="love-counter second-counter" data-aos="fade-up" data-aos-delay="100">
+                    <p>Thời gian quen nhau</p>
+                    <div class="counter-container">
+                        <div class="counter-item">
+                            <span id="years2">0</span>
+                            <span class="label">Năm</span>
+                        </div>
+                        <div class="counter-item">
+                            <span id="months2">0</span>
+                            <span class="label">Tháng</span>
+                        </div>
+                        <div class="counter-item">
+                            <span id="days2">0</span>
+                            <span class="label">Ngày</span>
+                        </div>
+                        <div class="counter-item">
+                            <span id="hours2">0</span>
+                            <span class="label">Giờ</span>
+                        </div>
+                        <div class="counter-item">
+                            <span id="minutes2">0</span>
+                            <span class="label">Phút</span>
+                        </div>
+                        <div class="counter-item">
+                            <span id="seconds2">0</span>
+                            <span class="label">Giây</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-primary" onclick="scrollToSection('message')">
+                Xem ngay
+            </button>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Khoảnh khắc của chúng ta</h2>
+            <p>Những kỷ niệm đẹp không thể nào quên</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos="zoom-in">
+                <a href="../images/TANA6643.JPG" data-lightbox="love-gallery" data-title="Khoảnh khắc hạnh phúc">
+                    <img src="../images/TANA6643.JPG" alt="Kỷ niệm 1">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                <a href="../images/TANA6666.JPG" data-lightbox="love-gallery" data-title="Những ngày bên nhau">
+                    <img src="../images/TANA6666.JPG" alt="Kỷ niệm 2">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                <a href="../images/TANA6723.JPG" data-lightbox="love-gallery" data-title="Nụ cười em">
+                    <img src="../images/TANA6723.JPG" alt="Kỷ niệm 3">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                <a href="../images/TANA6738.JPG" data-lightbox="love-gallery" data-title="Yêu em">
+                    <img src="../images/TANA6738.JPG" alt="Kỷ niệm 4">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                <a href="../images/TANA6788.JPG" data-lightbox="love-gallery" data-title="Bên em là nơi bình yên nhất">
+                    <img src="../images/TANA6788.JPG" alt="Kỷ niệm 5">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                <a href="../images/TANA6857.JPG" data-lightbox="love-gallery" data-title="Mãi mãi bên nhau">
+                    <img src="../images/TANA6857.JPG" alt="Kỷ niệm 6">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="message" class="message-section">
+        <div class="message-content">
+            <div class="letter-container">
+                <div class="letter-header">
+                    <div class="stamp">❤️</div>
+                    <div class="date" id="currentDate"></div>
+                </div>
+                <div class="letter-body">
+                    <h2>Gửi người con gái anh yêu,</h2>
+                    
+                    <p>Em à, hôm nay anh muốn viết những dòng này gửi đến em...</p>
+                    
+                    <p>Anh còn nhớ như in ngày đầu tiên mình gặp nhau. Khoảnh khắc ấy, tim anh đã thổn thức và anh biết rằng em chính là định mệnh của đời anh. Từ giây phút ấy, cuộc sống của anh đã thay đổi hoàn toàn, tràn ngập những màu sắc tươi đẹp mà trước đây anh chưa từng cảm nhận được.</p>
+                    
+                    <p>Những ngày tháng bên em là khoảng thời gian hạnh phúc nhất trong cuộc đời anh. Mỗi nụ cười của em đều khiến trái tim anh tan chảy. Mỗi ánh mắt của em đều làm anh say đắm. Và mỗi khoảnh khắc bên em đều là những kỷ niệm quý giá mà anh sẽ trân trọng mãi mãi.</p>
+                    
+                    <p>Anh biết đôi khi anh không phải là một người bạn trai hoàn hảo. Có những lúc anh vô tâm, có những khi anh khiến em buồn. Nhưng em à, anh hứa sẽ cố gắng hoàn thiện bản thân mỗi ngày. Bởi vì em xứng đáng nhận được những điều tốt đẹp nhất trên đời.</p>
+                    
+                    <p>Cảm ơn em vì đã luôn ở bên anh, tha thứ cho những sai lầm của anh và yêu thương anh vô điều kiện. Em là động lực để anh phấn đấu, là nguồn sức mạnh tinh thần của anh, và là người anh muốn dành trọn phần đời còn lại để yêu thương.</p>
+                    
+                    <div class="letter-closing">
+                        <p>Yêu em thật nhiều,</p>
+                        <p class="signature">Anh của em</p>
+                    </div>
+                </div>
+                <div class="letter-footer">
+                    <button class="btn-love" onclick="window.open('https://www.facebook.com/Bauuu1537', '_blank')">
+                        <span class="heart-icon">❤️</span>
+                        Gửi yêu thương
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="minigames" class="minigames-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Japanese Quiz Game</h2>
+                <p>Hãy thử thách kiến thức tiếng Nhật của bạn!</p>
+            </div>
+            <div class="game-container" data-aos="fade-up">
+                <div class="question-card">
+                    <div class="question-text"></div>
+                    <div class="options-container"></div>
+                </div>
+                <div class="game-controls">
+                    <button class="btn-primary start-game">はじめましょう！(Bắt đầu!)</button>
+                    <div class="score-display">Score: <span class="score">0</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Made with ❤️ for you</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
